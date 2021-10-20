@@ -40,7 +40,7 @@ const heroku = new Heroku({
 let baseURI = '/apps/' + conf.HEROKU.APP_NAME;
 
 let wk = conf.WORKTYPE == 'public' ? false : true
-var vtalk_dsc = 'start to Alexa voice chat'
+var vtalk_dsc = 'start to Public-Bot voice chat'
 var reply_tenu = 'reply to any voice message'
 
 const recognizeAudio = () => {
@@ -237,11 +237,11 @@ Neotro.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, dontAddCommandList: true
 //===============N===============
 //===============U===============
 
-Neotro.addCommand({ pattern: 'alexai ?(.*)', desc: 'ai ALEXA chat bot on off command' , fromMe: true, usage: '.alexi on / off' }, (async (message, match) => {
+Neotro.addCommand({ pattern: 'pubai ?(.*)', desc: 'ai ALEXA chat bot on off command' , fromMe: true, usage: '.alexi on / off' }, (async (message, match) => {
     var eva_status = `${conf.FULL_ALEXA}`
     if (match[1] == 'on') {
         if (eva_status == 'true') {
-            return await message.client.sendMessage(message.jid, '*Already on 👩‍🦰*', MessageType.text)
+            return await message.client.sendMessage(message.jid, '*Already on 🤖*', MessageType.text)
         }
         else {
             await heroku.patch(baseURI + '/config-vars', { 
@@ -249,12 +249,12 @@ Neotro.addCommand({ pattern: 'alexai ?(.*)', desc: 'ai ALEXA chat bot on off com
                     ['FULL_ALEXA']: 'true'
                 } 
             });
-            await message.client.sendMessage(message.jid, '*ALEXA working As  chat bot*', MessageType.text)
+            await message.client.sendMessage(message.jid, '*Public-Bot working As  chat bot*', MessageType.text)
         }
     }
     else if (match[1] == 'off') {
         if (eva_status !== 'false') {
-            return await message.client.sendMessage(message.jid, '*👩‍🦰chat bot already off*', MessageType.text)
+            return await message.client.sendMessage(message.jid, '*🤖chat bot already off*', MessageType.text)
         }
         else {
             await heroku.patch(baseURI + '/config-vars', { 
@@ -262,7 +262,7 @@ Neotro.addCommand({ pattern: 'alexai ?(.*)', desc: 'ai ALEXA chat bot on off com
                     ['FULL_ALEXA']: 'false'
                 } 
             });
-            await message.client.sendMessage(message.jid, '*👩‍🦰successful Disablechat bot*', MessageType.text)
+            await message.client.sendMessage(message.jid, '*🤖successful Disablechat bot*', MessageType.text)
         }
     }
 }));
