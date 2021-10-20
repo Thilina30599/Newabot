@@ -11,7 +11,7 @@ Neotro.addCommand({ pattern: 'ftext ?(.*)', desc: Lang.FRANCY, fromMe: tk }, asy
 const word = match[1]
 if (!word) return await message.sendMessage(" *Please Input Word* ")
 
-await message.sendMessage('👻 *Text Converting* 🕊')
+await message.sendMessage('🔁 *Text Converting* 🔠')
 
 await axios
       .get(`https:///api/fancytext?text=${word}&apikey=`)
@@ -22,7 +22,7 @@ await axios
         } = response.data
 
    
-	const msg = `**◁◉◉◉◉Fancy Text◉◉◉▷* \n             *👩‍🦰ᴀᴍᴀᴢᴏɴᴇ ᴀʟᴇxᴀ* * \n              \n\n ${result} \n\n                 *◄◉◉◉◉◉◉◉◉◉◉ᴀʟᴇxᴀ◉◉◉◉◉◉◉◉►*`
+	const msg = `**◁◉◉◉◉Fancy Text◉◉◉▷* \n             *Public-BOt®️* * \n              \n\n ${result} \n\n                 *◄◉◉◉◉◉◉◉◉◉◉Public-BOt®️◉◉◉◉◉◉◉◉►*`
 	
 	 await message.client.sendMessage(message.jid, msg , MessageType.text, {
           quoted: message.data,
@@ -37,7 +37,7 @@ await axios
 const word = match[1]
 if (!word) return await message.sendMessage(" *Please Input Word* ")
 
-await message.sendMessage('👻 *Text Converting* 🕊')
+await message.sendMessage('🔁 *Text Converting* 🔠')
 
 await axios
       .get(`https://.herokuapp.com/api/fancytext?text=${word}&apikey=`)
@@ -48,7 +48,7 @@ await axios
         } = response.data
 
    
-	const msg = `*◁◉◉◉◉Fancy Text◉◉◉▷* \n             *👩‍🦰ᴀᴍᴀᴢᴏɴᴇ ᴀʟᴇxᴀ* \n\n ${result} \n\n                \n*◄◉◉◉◉◉◉◉◉◉◉ᴀʟᴇxᴀ◉◉◉◉◉◉◉◉►*`
+	const msg = `*◁◉◉◉◉Fancy Text◉◉◉▷* \n             *Public-BOt®️* \n\n ${result} \n\n                \n*◄◉◉◉◉◉◉◉◉◉◉Public-BOt®️◉◉◉◉◉◉◉◉►*`
 	
 	 await message.client.sendMessage(message.jid, msg , MessageType.text, {
           quoted: message.data,
