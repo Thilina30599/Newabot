@@ -23,7 +23,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 
 Neotro.addCommand({pattern: 'clear', fromMe: true, desc: Lang.CLEAR, dontAddCommandList: false}, (async (message, match) => {
 
-    await message.sendMessage('```cleaning chat...```');
+    await message.sendMessage('```Deleting All masseges in this chat...```');
     await message.client.modifyChat (message.jid, ChatModification.delete);
-    await message.sendMessage('```👾 Chat cleared ```');
+    await message.sendMessage('```🤖 Chat cleared ```');
 }));
