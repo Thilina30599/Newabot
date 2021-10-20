@@ -7,7 +7,7 @@ NEOTROX - TEENUHX
 const Neotro = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const axios = require ('axios')
-const LOAD_ING = "*👩‍🦰Searching details*"
+const LOAD_ING = "*Searching details*"
 const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('amazone');
