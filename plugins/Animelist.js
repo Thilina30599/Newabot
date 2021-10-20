@@ -1,6 +1,7 @@
 const Neotro = require('../events');
 const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
-const ANIME = "\n\n  *👩‍🦰Amazone Alexa Anime List*\n\n╔═════════▷\n╠🌼: .loli\n╠🌼: .wifu\n╠🌼: .neko\n╠🌼: .ava\n╠🌼: .kemo\n╠🌼: .awoo\n╠🌼: .shinobu\n╠🌼: .megumin\n╚═════════▷"
+const ANIME = "\n\n*Public-BOt®️ Anime List*\n\n╔═════════▷\n╠🪦: .loli\n╠🪦: .wifu\n╠🪦: .neko\n╠🪦: .ava\n╠🪦: .kemo\n╠🪦: .awoo\n╠🪦: .shinobu\n╠🪦: .megumin\n╚═════════▷
+"
 const fs = require('fs');
 const Ln = "Anime List"
 const axios = require('axios');
