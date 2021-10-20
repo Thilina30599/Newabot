@@ -4,6 +4,7 @@ you may not use this file except in compliance with the License.
 NEOTROX - TEENUHX
 */
 
+
 const Neotro = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Heroku = require('heroku-client');
@@ -25,7 +26,7 @@ if (Config.AI_BOT == 'true') {
 			try {
 				const response = await got(url);
 				const json = JSON.parse(response.body);
-			if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '\n*👩‍🦰 ' + Lang.BOT +'* ```' + json.messages[0].response + '```\n\n' , MessageType.text,{quoted: message.data});
+			if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '\n*🤖 ' + Lang.BOT +'* ```' + json.messages[0].response + '```\n\n' , MessageType.text,{quoted: message.data});
 			} catch {
 				return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDAC, MessageType.text);
 			}
@@ -39,7 +40,7 @@ if (Config.AI_BOT == 'true') {
 			try {
 				const response = await got(url);
 				const json = JSON.parse(response.body);
-			if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '\n*👩‍🦰 ' + Lang.BOT +'* ```' + json.messages[0].response + '```\n\n' , MessageType.text,{quoted: message.data});
+			if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '\n*🤖 ' + Lang.BOT +'* ```' + json.messages[0].response + '```\n\n' , MessageType.text,{quoted: message.data});
 			} catch {
 				return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDAC, MessageType.text);
 			}
@@ -55,7 +56,7 @@ else if (Config.AI_BOT == 'false') {
 			try {
 				const response = await got(url);
 				const json = JSON.parse(response.body);
-			if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '\n👩‍🦰 ' + Lang.BOT + Lang.NOT_AVAILABLE , MessageType.text);
+			if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '\n🤖 ' + Lang.BOT + Lang.NOT_AVAILABLE , MessageType.text);
 			} catch {
 				return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDAC, MessageType.text);
 			}
@@ -69,7 +70,7 @@ else if (Config.AI_BOT == 'false') {
 			try {
 				const response = await got(url);
 				const json = JSON.parse(response.body);
-			if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '\n👩‍🦰 ' + Lang.BOT + Lang.NOT_AVAILABLE , MessageType.text,{quoted: message.data});
+			if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '\n🤖 ' + Lang.BOT + Lang.NOT_AVAILABLE , MessageType.text,{quoted: message.data});
 			} catch {
 				return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDAC, MessageType.text);
 			}
